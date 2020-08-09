@@ -1,0 +1,40 @@
+{
+  "0": [
+    {
+      "id": 5,
+      "price": 0,
+      "name": "Carriage"
+    },
+    {
+      "id": 6,
+      "price": 0,
+      "name": "Carriage"
+    }
+  ],
+  "2": [
+    {
+      "id": 3,
+      "price": 2,
+      "name": "Pen"
+    }
+  ],
+  "5": [
+    {
+      "id": 8,
+      "price": 5,
+      "name": "Ring"
+    },
+    {
+      "id": 9,
+      "price": 5,
+      "name": "Ring"
+    }
+  ],
+  "11": [
+    {
+      "id": 0,
+      "price": 11,
+      "name": "Bed"
+    }
+  ]
+}
