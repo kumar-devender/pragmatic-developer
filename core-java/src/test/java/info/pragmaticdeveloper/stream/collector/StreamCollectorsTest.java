@@ -31,6 +31,18 @@ class StreamCollectorsTest {
         System.out.println(str);
     }
 
+    @Test
+    void testCollectName() {
+        Map<String, Integer> map = itemNames.stream()
+                .collect(groupingBy(identity(), collectingAndThen(counting(), Long::intValue)))
+                .entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (value1, value2) -> value2, LinkedHashMap::new));
+
+        System.out.println(map);
+    }
+
 
     //CollectingAndThen
     @Test
