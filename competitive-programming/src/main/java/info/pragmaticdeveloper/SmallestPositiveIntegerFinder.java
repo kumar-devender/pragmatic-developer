@@ -4,6 +4,9 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
 
+/**
+ * Find smallest positive integer not present in the array
+ */
 public class SmallestPositiveIntegerFinder {
     public int getSmallestPositiveInteger(int[] array) {
         Set<Integer> set = IntStream.of(array)

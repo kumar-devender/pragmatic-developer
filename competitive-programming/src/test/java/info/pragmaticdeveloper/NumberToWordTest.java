@@ -16,18 +16,16 @@ class NumberToWordTest {
     }
 
     /**
-     *
-     * @param input
-     * e.g:-
-     * 13 : thirteen
-     * 20 : twenty
-     * 21 : twenty one
-     * 33 : thirty three
-     * 70 : seventy
-     * 91 : ninety one
-     * 991 : nine hundred ninety nine
-     * 9991 : nine thousand nine hundred ninety nine
-     * 99991 : ninety nine thousand nine hundred ninety nine
+     * @param input e.g:-
+     *              13 : thirteen
+     *              20 : twenty
+     *              21 : twenty one
+     *              33 : thirty three
+     *              70 : seventy
+     *              91 : ninety one
+     *              991 : nine hundred ninety nine
+     *              9991 : nine thousand nine hundred ninety nine
+     *              99991 : ninety nine thousand nine hundred ninety nine
      */
 
     @ParameterizedTest
