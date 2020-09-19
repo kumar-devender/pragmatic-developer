@@ -1,10 +1,10 @@
 package info.pragmaticdeveloper;
 
 public class WeightCalculator {
-    public static void main(String[] args) {
-        String input[] = "10B20 20B10 10 5B10".split(" ");
+    public int calculate(String input) {
+        String boxes[] = input.split(" ");
         int sum = 0;
-        for (String label : input) {
+        for (String label : boxes) {
             String weight[] = label.split("B");
             if (weight.length > 1) {
                 sum += Integer.parseInt(weight[0]) * Integer.parseInt(weight[1]);
@@ -12,8 +12,7 @@ public class WeightCalculator {
                 sum += Integer.parseInt(weight[0]);
             }
         }
-
-        System.out.println(sum);
+        return sum;
     }
 
 }
