@@ -1,9 +1,6 @@
 package info.pragmaticdeveloper;
 
 public class StringEncryption {
-    public static void main(String[] args) {
-        System.out.println(decryptString("W1A3Y2F5A1I3R2"));
-    }
 
     public String encryptString(String input) {
         if (input.isEmpty()) {
@@ -26,14 +23,13 @@ public class StringEncryption {
         return sb.toString();
     }
 
-    public static String decryptString(String input) {
+    public String decryptString(String input) {
         if (input.isEmpty()) {
             return "";
         }
         char charArray[] = input.toCharArray();
         StringBuilder sb = new StringBuilder();
         char previousChar = charArray[0];
-        sb.append(previousChar);
         for (int i = 1; i < charArray.length; i++) {
             if (Character.isDigit(charArray[i])) {
                 appendChar(sb, previousChar, Character.getNumericValue(charArray[i]));
