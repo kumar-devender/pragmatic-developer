@@ -1,5 +1,7 @@
 package info.pragmaticdeveloper;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -30,21 +32,22 @@ class NumberToWordTest {
 
     @ParameterizedTest
     @MethodSource("dataProvider")
-    void convert(int input) {
-        System.out.println(input + " : " + numberToWord.convert(input));
+    void convert(int input, String expected) {
+        String actual = numberToWord.convert(input);
+        MatcherAssert.assertThat(actual, Matchers.equalTo(expected));
     }
 
     private static Stream<Arguments> dataProvider() {
         return Stream.of(
-                Arguments.of(13),
-                Arguments.of(20),
-                Arguments.of(21),
-                Arguments.of(33),
-                Arguments.of(70),
-                Arguments.of(91),
-                Arguments.of(991),
-                Arguments.of(9991),
-                Arguments.of(99991)
+                Arguments.of(13, "thirteen"),
+                Arguments.of(20, "twenty "),
+                Arguments.of(21, "twenty one"),
+                Arguments.of(33, "thirty three"),
+                Arguments.of(70, "seventy "),
+                Arguments.of(91, "ninety one"),
+                Arguments.of(991, "nine hundred ninety nine"),
+                Arguments.of(9991, "nine thousand nine hundred ninety nine"),
+                Arguments.of(99991, "ninety nine thousand nine hundred ninety nine")
         );
     }
 }
