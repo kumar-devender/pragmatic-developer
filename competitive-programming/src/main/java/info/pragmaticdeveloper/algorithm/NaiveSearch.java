@@ -1,18 +1,23 @@
 package info.pragmaticdeveloper.algorithm;
 
+/**
+ * https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching
+ */
 public class NaiveSearch {
     public static void main(String[] args) {
-        char[] fullText = "THIS IS A TEST TEXT".toCharArray();
-        char[] searchText = "TEST".toCharArray();
-        int i = 0;
-        int j = 0;
-        while (i < fullText.length) {
-            if (fullText[i] == searchText[j] && j < searchText.length) {
-                i++;
-                j++;
-            } else {
-                j = 0;
-                i++;
+        char[] fullText = "AABAACAADAABAAABAA".toCharArray();
+        char[] searchText = "AABA".toCharArray();
+
+        for (int i = 0; i < fullText.length - searchText.length; i++) {
+            int j;
+            for (j = 0; j < searchText.length; j++) {
+                if (fullText[i + j] != searchText[j]) {
+                    break;
+                }
+            }
+
+            if (j == searchText.length) {
+                System.out.println("Found at index " + i);
             }
         }
     }
