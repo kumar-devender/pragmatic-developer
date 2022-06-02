@@ -6,6 +6,6 @@ public class ProcessReward {
     }
 
     public static Customer updateBalanceReward(Order order, Customer customer) {
-        return new Customer(order.getOrderRewards() + customer.getRewardsBalance());
+        return new Customer(order.getOrderRewards() + customer.getRewardsBalance(), null, null);
     }
 }
