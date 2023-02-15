@@ -1,4 +1,4 @@
-package info.pragmaticdevelope.domain;
+package info.pragmaticdeveloper.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
