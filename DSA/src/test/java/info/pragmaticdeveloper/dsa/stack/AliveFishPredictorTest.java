@@ -10,21 +10,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 
-class BracketsVerifierTest {
+class AliveFishPredictorTest {
 
     public static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                Arguments.of(")(", 0),
-                Arguments.of("{[()()]}", 1),
-                Arguments.of("([)()]", 0)
+                Arguments.of(new int[]{4, 3, 2, 1, 5}, new int[]{0, 1, 0, 0, 0}, 2)
         );
     }
 
     @ParameterizedTest
     @MethodSource("testDataProvider")
-    void verify(String input, int expected) {
-        BracketsVerifier bracketsVerifier = new BracketsVerifier();
-        var result = bracketsVerifier.verify(input);
+    void countAliveFish(int[] sizes, int[] movement, int expected) {
+        var result = new AliveFishPredictor().countAliveFish(sizes, movement);
         assertThat(result, is(expected));
     }
 }
