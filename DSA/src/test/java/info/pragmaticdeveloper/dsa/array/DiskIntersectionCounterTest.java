@@ -16,7 +16,7 @@ class DiskIntersectionCounterTest {
     @MethodSource("testDataProvider")
     void testMaxIntersection(int[] input, int expected) {
         DiskIntersectionCounter intersectionCounter = new DiskIntersectionCounter();
-        var result = intersectionCounter.getMaxIntersection(input);
+        var result = intersectionCounter.getMaxIntersectionBruteForce(input);
         assertThat(result, equalTo(expected));
     }
 
