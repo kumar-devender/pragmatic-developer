@@ -16,6 +16,7 @@ class MaximalSliceFinderTest {
                 Arguments.of(new int[]{5, -7, 3, 5, -2, 4, -1}, 10),
                 Arguments.of(new int[]{5, -7, 3, 5}, 8),
                 Arguments.of(new int[]{5, -2, 4, -1}, 7),
+                Arguments.of(new int[]{3, 2, -6, 4, 0}, 5),
                 Arguments.of(new int[]{-5, -2, 15, -1}, 15),
                 Arguments.of(new int[]{5}, 5)
         );
@@ -38,7 +39,7 @@ class MaximalSliceFinderTest {
     @ParameterizedTest
     @MethodSource("testDataProvider")
     void findMaxSlice(int[] arr, int expected) {
-        int result = new MaximalSliceFinder().findMaxSlice(arr);
+        int result = new MaximalSliceFinder().findMaxSum(arr);
         assertThat(result, is(expected));
     }
 }

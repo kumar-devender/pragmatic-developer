@@ -19,13 +19,13 @@ public class MaximalSliceFinder {
         return result;
     }
 
-    public int findMaxSlice(int[] arr) {
-        int maxEnding = 0, maxSlice = 0;
+    public int findMaxSum(int[] arr) {
+        int max = 0, maxSlice = 0;
         for (int a : arr) {
-            maxEnding = Math.max(0, maxEnding + a);
-            maxSlice = Math.max(maxSlice, maxEnding);
+            maxSlice = Math.max(0, maxSlice + a);
+            max = Math.max(max, maxSlice);
         }
-        return maxSlice;
+        return max;
     }
 
     public int findMaxSliceBruteforce(int[] arr) {
