@@ -30,7 +30,9 @@ class SieveOfEratosthenesTest {
                 Arguments.of(2, new int[]{2}),
                 Arguments.of(5, new int[]{2, 3, 5}),
                 Arguments.of(20, new int[]{2, 3, 5, 7, 11, 13, 17, 19}),
-                Arguments.of(30, new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29})
+                Arguments.of(16, new int[]{2, 3, 5, 7, 11, 13}),
+                Arguments.of(30, new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29}),
+                Arguments.of(25, new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23})
         );
     }
 }
