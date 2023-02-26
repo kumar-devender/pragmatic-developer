@@ -9,21 +9,18 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-class ChocolateTableTest {
+class CommonPrimeDivisorTest {
 
-    private static Stream<Arguments> testDataProvider() {
+    public static Stream<Arguments> testDataProvider() {
         return Stream.of(
-                Arguments.of(12, 2, 6),
-                Arguments.of(10, 4, 5),
-                Arguments.of(12, 8, 3),
-                Arguments.of(16, 12, 4)
+                Arguments.of(new int[]{15, 10, 3}, new int[]{75, 30, 5}, 1)
         );
     }
 
     @ParameterizedTest
     @MethodSource("testDataProvider")
-    void countEatenChocolate(int n, int m, int expected) {
-        var result = new ChocolateTable().countEatenChocolate(n, m);
+    void getCommonPrimeDivisor(int[] a, int[] b, int expected) {
+        var result = new CommonPrimeDivisor().getCommonPrimeDivisor(a, b);
         assertThat(result, is(expected));
     }
 }
