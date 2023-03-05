@@ -1,7 +1,7 @@
 package info.pragmaticdeveloper.dsa.array;
 
 public class SubSequenceSum {
-    public int[] getSubsSequence(int arr[], int s) {
+    public int[] getSubsSequence(int[] arr, int s) {
 
         int total = 0;
         int front = 0;
