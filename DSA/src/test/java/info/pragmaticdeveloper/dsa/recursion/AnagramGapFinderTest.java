@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 
-class AnagramTest {
+class AnagramGapFinderTest {
 
     private static Stream<Arguments> testDataProvider() {
         return Stream.of(
