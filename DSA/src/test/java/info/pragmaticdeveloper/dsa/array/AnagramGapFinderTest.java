@@ -16,4 +16,13 @@ class AnagramGapFinderTest {
         var result = new AnagramGapFinder().findGap(s1, s2);
         assertThat(result, is(expected));
     }
+
+    @ParameterizedTest
+    @CsvSource({"hello,billion,6",
+            "glue,legs,2",
+            "candy,day,2"})
+    void getAnagramDiffUsingArray(String s1, String s2, int expected) {
+        var result = new AnagramGapFinder().findGapWithArray(s1, s2);
+        assertThat(result, is(expected));
+    }
 }
