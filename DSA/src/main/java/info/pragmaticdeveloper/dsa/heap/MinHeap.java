@@ -3,14 +3,10 @@ package info.pragmaticdeveloper.dsa.heap;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class MinHeap<T extends Comparable> {
+public class MinHeap<T extends Comparable<T>> {
     private int size;
     private T[] items;
     private int capacity;
-
-    private MinHeap() {
-        // default constructor to avoid creating instance of unknown type
-    }
 
     public MinHeap(Class<T> type, int size) {
         this.items = (T[]) Array.newInstance(type, size);

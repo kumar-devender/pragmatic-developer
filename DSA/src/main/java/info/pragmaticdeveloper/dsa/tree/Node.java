@@ -1,5 +1,7 @@
 package info.pragmaticdeveloper.dsa.tree;
 
+import java.util.*;
+
 public class Node {
     private int data;
     private Node left;
@@ -19,6 +21,24 @@ public class Node {
                 right.insert(item);
             }
         }
+    }
+
+    public int[] levelOrder() {
+        List<Integer> levelOrder = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(this);
+        while (!queue.isEmpty()) {
+            var current = queue.poll();
+            levelOrder.add(current.getData());
+            if (current.left != null) {
+                queue.add(current.left);
+            }
+
+            if (current.right != null) {
+                queue.add(current.right);
+            }
+        }
+        return levelOrder.stream().mapToInt(i -> i).toArray();
     }
 
     public void printInOrder() {

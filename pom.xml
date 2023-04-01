@@ -15,6 +15,7 @@
         <module>core-java</module>
         <module>DSA</module>
         <module>design-pattern</module>
+        <module>java-by-comparison</module>
     </modules>
     <name>pragmatic-developer-parent</name>
     <packaging>pom</packaging>
